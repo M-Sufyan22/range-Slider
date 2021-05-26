@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Site settings -->
+
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="utf-8">
+    <!-- Preload -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="css/bootstrap.min.css" as="style">
+    <link rel="preload" href="css/fontawesome/css/all.css" as="style">
+    <title>Project</title>
+    <!-- Fonts -->/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css" integrity="sha512-ksbpl5EUb4HLEKUNItsPMT/Ih6KcISE53GbYOu3xFUVYvTSSX5AJxTI2aigdQm9uNSkSsRMHsSGNKppkt691lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="3ace927719a441b88b185e37-|49"></script>
+    <link href="css/all.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <!-- CSS styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/nouislider.css" rel="stylesheet" media="all" />
+
+</head>
+
+<body>
+    <input type="hidden" name="hosting_type" value="premium">
+
+
+
+    <section id="order" class="sec-normal sec-bg3" style="padding-top: 55px;">
+        <div class="container">
+            <h4 class="section-heading mb-4 montserrat">ORDER A SERVER</h4>
+            <div class="wpc-cloud-range">
+                <div class="row">
+                    <div class="col-md-8 mb-2 mt-2">
+                        <div class="plan-picker">
+                            <h3 class="mb-0">Need a hand picking a plan?</h3>
+                            <p>Let us know a few details about what you'll be running on the server and we can help you to pick out a plan.</p>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Which version do you plan to run?
+                                    <select class="form-control form-control-dark" style="height: 46px;" id="choose-version">
+                                    <option value="1.13-plus">1.13.2 or above</option>
+                                    <option value="1.9-to-1.13">1.9 to 1.13.2</option>
+                                    <option value="1.8.8-below">1.8.8 or below</option>
+                                </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    What type of server will you run?
+                                    <select class="form-control form-control-dark" style="height: 46px;" id="choose-jar">
+                                    <option value="spigot">Spigot / Paper</option>
+                                    <option value="vanilla">Vanilla Minecraft</option>
+                                    <option value="bedrock">Bedrock</option>
+                                    <option value="forge">Forge Modpack</option>
+                                </select>
+                                </div>
+                            </div>
+                            <br>
+                            <p class="mb-0">For a <span style="color: #51ae59;" id="chosen-jar">Spigot / Paper</span> server running version <span id="chosen-version" style="color: #51ae59;">1.13.2 or above</span> we'd recommend a minimum of <span id="chosen-ram" style="color: #51ae59;">3GB</span>                                of RAM.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-2 mt-2">
+                        <div class="wpc-vps-info" style="height: 100%;">
+                            <div class="content-price price-container" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                                <div>
+                                    <div class="price-content">
+                                        <span id="plan-name"></span>
+                                        <br>
+                                        <div class="row d-none d-md-flex">
+                                            <div class="col-md-12 mt-4">
+                                                <div class="separator mb-2">
+                                                    Available Locations
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img class="img-fluid lazyload" data-src="/src/img/flags/na.png">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img class="img-fluid lazyload" data-src="/src/img/flags/eu.png">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img class="img-fluid lazyload" data-src="/src/img/icons/na.png">
+                                            </div>
+                                            <div class="col-md-3">
+                                                <img class="img-fluid lazyload" data-src="/src/img/flags/au.png">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-addon">
+                                    <span>
+                                    <div class="price"><span class="symbol coin">$</span>
+                                    <span id="price-val"></span>
+                                    <span id="cycle-val"></span>
+                                </div>
+                                </span>
+                                <a id="orderlink" href="#" class="btn btn-green">Configure Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 budgetpremium">
+                <div class="slider-ui" id="plan-slider" data-handle="1">
+                    <input class="slider-inp invisible" type="text" />
+                    <div class="slider-line"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="js/jquery.min.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/popper.min.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/lazysizes.min.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script defer src="/js/scripts.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/nouislider.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/minecraft/all.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="js/minecraft/budget-premium.js" type="3ace927719a441b88b185e37-text/javascript"></script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="3ace927719a441b88b185e37-|49" defer=""></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"655973636cddca80","token":"86efdf2f94444615ba04238334ae9d95","version":"2021.5.1","si":10}'></script>
+</body>
+
+</html>
