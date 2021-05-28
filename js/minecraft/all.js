@@ -1,5 +1,0 @@
-function expandcat(el){var cat=el.attr("data-category");$("[data-categoryinfo="+cat+"]").slideDown();el.addClass("expanded");$(el.parent()).addClass("has-expanded");var chevron=el.find(".fas.fa-chevron-down");chevron.removeClass("fa-chevron-down");chevron.addClass("fa-chevron-up");}
-function collapsecat(el){var cat=el.attr("data-category");$("[data-categoryinfo="+cat+"]").slideUp();el.removeClass("expanded");$(el.parent()).removeClass("has-expanded");var chevron=el.find(".fas.fa-chevron-up");chevron.removeClass("fa-chevron-up");chevron.addClass("fa-chevron-down");}
-$(document).ready(function(){$("[data-category]").click(function(){if($(this).is(".expanded")){collapsecat($(this));$(".placeholder-category").slideDown();return}
-$(".placeholder-category").slideUp();$(".category.expanded").each(function(i,el){collapsecat($(el));});expandcat($(this));})})
-$(".mobile-specopts").click(function(){var el=$(this);var specsinfo=$(el.parent().find(".specsinfo"));specsinfo.is(":visible")?specsinfo.slideUp():specsinfo.slideDown();el.toggleClass("expanded");var icon=$(el.find(".fas"));icon.toggleClass("fa-chevron-down");icon.toggleClass("fa-chevron-up");})
