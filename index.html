@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Range Slider</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -198,7 +203,7 @@
         
         .wpc-vps-info .price,
         #plan-name {
-            font-size: 34px!important;
+            font-size: 25px!important;
             display: -webkit-inline-box;
             color: #bbbbbd
         }
@@ -333,10 +338,6 @@
         
         .noUi-connects {
             border-radius: 3px
-        }
-        
-        .noUi-connect {
-            background: #3fb8af
         }
         
         .noUi-draggable {
@@ -521,6 +522,51 @@
             top: 50%;
             right: 120%
         }
+        
+        .lazyloaded {
+            width: 80px
+        }
+        /* .my-range-row {
+            display: inline-flex !important;
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 15px;
+        }
+        
+        .range-columnLeft {
+            -webkit-box-flex: 0 !important;
+            -ms-flex: 0 0 60% !important;
+            flex: 0 0 60% !important;
+            max-width: 60% !important;
+        }
+        
+        .range-columnRight {
+            -webkit-box-flex: 0 !important;
+            -ms-flex: 0 0 40% !important;
+            flex: 0 0 40% !important;
+            max-width: 40% !important;
+        } */
+        /* @media only screen and (max-width: 768px) {
+            .my-range-row {
+                flex-wrap: wrap;
+                gap: 0;
+            }
+            .content-price {
+                width: 100%;
+            }
+            .range-columnLeft {
+                -webkit-box-flex: 0 !important;
+                -ms-flex: 0 0 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+            .range-columnRight {
+                -webkit-box-flex: 0 !important;
+                -ms-flex: 0 0 100% !important;
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+        } */
     </style>
 </head>
 
@@ -528,11 +574,11 @@
     <div>
         <input type="hidden" name="hosting_type" value="premium">
         <section id="order" class="sec-normal sec-bg3" style="padding-top: 55px;">
-            <div class="container">
+            <div class="container container-md ">
                 <h4 class="section-heading mb-4">ORDER A SERVER</h4>
                 <div class="wpc-cloud-range">
                     <div class="row">
-                        <div class="col-md-8 mb-2 mt-2">
+                        <div class="col-md-8 col-sm-12 col-xs-12 col-12 mb-2 mt-2">
                             <div class="plan-picker">
                                 <h3 class="mb-0">Need a hand picking a plan?</h3>
                                 <p>Let us know a few details about what you'll be running on the server and we can help you to pick out a plan.</p>
@@ -561,7 +607,7 @@
                                 <p class="mb-0">For a <span class="selected-color" id="chosen-jar">Spigot / Paper</span> server running version <span id="chosen-version" class="selected-color">1.13.2 or above</span> we'd recommend a minimum of <span id="chosen-ram" class="selected-color">3GB</span>                                    of RAM.</p>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-2 mt-2">
+                        <div class="col-md-4 col-sm-12 col-xs-12 col-12 mb-2 mt-2">
                             <div class="wpc-vps-info" style="height: 100%;">
                                 <div class="content-price " style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                                     <div>
@@ -569,12 +615,21 @@
                                             <span id="plan-name"></span>
                                             <br>
                                             <div class="row d-none d-md-flex">
-                                                <div class="col-md-12 mt-4">
-                                                    <div class="separator mb-2">
-                                                        Available Locations
-                                                    </div>
-                                                </div>
 
+                                                <div class="row d-none d-md-flex">
+                                                    <div class="col-md-12 mt-4">
+                                                        <div class="separator mb-2">
+                                                            Available Locations
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img class="img-fluid lazyloaded" data-src="/src/img/flags/na.png" src="https://www.transparentpng.com/thumb/germany-flag/CEbjV6-germany-flags-png-picture.png">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <img class="img-fluid lazyloaded" data-src="/src/img/flags/eu.png" src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Flag_of_the_Netherlands.png">
+                                                    </div>
+
+                                                </div>
                                             </div>
 
                                         </div>
